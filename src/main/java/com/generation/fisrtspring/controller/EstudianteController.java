@@ -6,6 +6,7 @@ import com.generation.fisrtspring.service.EstudianteService;
 import com.generation.fisrtspring.model.Estudiante;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -66,5 +67,6 @@ public class EstudianteController {
     public List<Estudiante> estudiantesPorEquipo(@PathVariable Integer equipo){
         return estudianteService.estudiantePorEquipo(equipo);
     }
+    
     
 }
